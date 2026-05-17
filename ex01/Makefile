@@ -6,7 +6,7 @@
 #    By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/17 12:21:34 by vabatist          #+#    #+#              #
-#    Updated: 2026/05/17 12:23:25 by vabatist         ###   ########.fr        #
+#    Updated: 2026/05/17 16:58:13 by vabatist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,21 +15,20 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 NAME 		= PhoneBook
 RM			= rm -rf
 SRCS 		= main.cpp PhoneBook.cpp Contact.cpp
-OBJS		= ${SRCS:%.cpp=%.o}
-
-%.o: %.cpp
-	@${CXX} ${CXXFLAGS} -c $< -o $@
+OBJS		= ${SRCS:.cpp=.o}
 
 all: ${NAME}
+
 ${NAME} : ${OBJS}
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
-	@echo "PhoneBook is ready. Usage: ./PhoneBook"
+	@echo "PhoneBook is ready. \nUsage: ./PhoneBook"
 
 clean:
-	@${RM} ${OBJS}
+	${RM} ${OBJS}
 
 fclean: clean
 	${RM} ${NAME}
+	@echo "Goodbye!"
 
 re: fclean all
 

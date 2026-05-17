@@ -6,11 +6,12 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 12:43:48 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/17 14:18:55 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/17 19:31:19 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <iostream>
 #include <iomanip>
 
 PhoneBook::PhoneBook(void)
@@ -23,26 +24,41 @@ PhoneBook::~PhoneBook(void)
 
 }
 
-void PhoneBook::AddContact(void)
+/**
+ * Adds a new contact to the phone book.
+ * It uses a static variable `position` to keep track of where the next contact should be added in the array.
+ * If the position exceeds the maximum (8), overwrites the oldest contact.
+ * The function first clears any existing data for that contact slot,
+ * then prompts the user to enter new contact information,
+ * and finally increments the count of contacts if it's less than 8.
+ */
+void PhoneBook::addContact(void)
 {
 	static int	position;
 
 	if (position >= 8)
 		position = 0;
-	this->_contacts[position].ClearContact();
-	this->_contacts[position].CreateContact();
+	this->_contacts[position].clearContact();
+	this->_contacts[position].createContact();
 	position++;
 	if (this->_count < 8)
 		this->_count++;
 	std::cout << "Done!" << std::endl;
 }
 
-int PhoneBook::GetNumberOfContacts(void)
+/**
+ * Returns the current number of contacts stored in the phone book, which can be up to 8.
+ */
+int PhoneBook::getNumberOfContacts(void)
 {
 	return this->_count;
 }
 
-void PhoneBook::DisplayContacts(void)
+/**
+ * Displays a list of all contacts in the phone book in a formatted table.
+ * It shows the index, first name, last name, and nickname of each contact.
+ */
+void PhoneBook::displayContacts(void)
 {
 	int			i;
 	std::string	field;
@@ -57,46 +73,60 @@ void PhoneBook::DisplayContacts(void)
 	while (i < this->_count)
 	{
 		std::cout << "|" << std::setw(10) << std::right << (i + 1)
-			  << "|" << std::setw(10) << std::right << this->_PrintFieldFormatted(this->_contacts[i].GetFirstName(), false)
-			  << "|" << std::setw(10) << std::right << this->_PrintFieldFormatted(this->_contacts[i].GetLastName(), false)
-			  << "|" << std::setw(10) << std::right << this->_PrintFieldFormatted(this->_contacts[i].GetNickname(), false)
+			  << "|" << std::setw(10) << std::right << this->_printFieldFormatted(this->_contacts[i].getFirstName())
+			  << "|" << std::setw(10) << std::right << this->_printFieldFormatted(this->_contacts[i].getLastName())
+			  << "|" << std::setw(10) << std::right << this->_printFieldFormatted(this->_contacts[i].getNickname())
 			  << "|" << std::endl;
 		i++;
 	}
 	std::cout << std::setfill('-') << std::setw(45) << "-" << std::setfill(' ') << std::endl;
 }
 
-void PhoneBook::DisplayContact(int i)
+/**
+ * Displays the full details of a contact at a given index.
+ */
+void PhoneBook::displayContact(int i)
 {
 	std::cout << "first name: ";
-	this->_PrintField(this->_contacts[i].GetFirstName(), true);
+	this->_printField(this->_contacts[i].getFirstName(), true);
 	std::cout << std::endl;
 	std::cout << "last name: ";
-	this->_PrintField(this->_contacts[i].GetLastName(), true);
+	this->_printField(this->_contacts[i].getLastName(), true);
 	std::cout << std::endl;
 	std::cout << "nickname: ";
-	this->_PrintField(this->_contacts[i].GetNickname(), true);
+	this->_printField(this->_contacts[i].getNickname(), true);
 	std::cout << std::endl;
 	std::cout << "phone number: ";
-	this->_PrintField(this->_contacts[i].GetPhoneNumber(), true);
+	this->_printField(this->_contacts[i].getPhoneNumber(), true);
 	std::cout << std::endl;
 	std::cout << "darkest secret: ";
-	this->_PrintField(this->_contacts[i].GetDarkestSecret(), true);
+	this->_printField(this->_contacts[i].getDarkestSecret(), true);
 	std::cout << std::endl;
 }
 
-void PhoneBook::_PrintField(std::string field, bool verbose)
+/**
+ * Prints a field of a contact. If verbose is true, it prints the field as is.
+ * If verbose is false, it formats the field for display in the contact list.
+ */
+void PhoneBook::_printField(std::string field, bool verbose)
 {
 	if (verbose == true)
 	{
 		std::cout << field;
 		return ;
 	}
-	std::cout << this->_PrintFieldFormatted(field, false);
+	std::cout << this->_printFieldFormatted(field);
 }
 
-std::string PhoneBook::_PrintFieldFormatted(std::string field, bool verbose)
-{	(void)verbose;	if (field.length() > 10)
+/**
+ * Formats a string field for display in the contact list.
+ * If the field is longer than 10 characters,
+ * it truncates the string to 9 characters and appends a dot ('.') to indicate truncation.
+ * If the field is 10 characters or shorter, it returns the field as is.
+ */
+std::string PhoneBook::_printFieldFormatted(std::string field)
+{	if (field.length() > 10)
 		return field.substr(0, 9) + ".";
+	else
 	return field;
 }

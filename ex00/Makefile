@@ -6,7 +6,7 @@
 #    By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/16 18:25:15 by vabatist          #+#    #+#              #
-#    Updated: 2026/05/16 18:47:05 by vabatist         ###   ########.fr        #
+#    Updated: 2026/05/17 17:00:38 by vabatist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,21 +15,20 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 NAME 		= megaphone
 RM			= rm -rf
 SRC 		= megaphone.cpp
-OBJS		= ${SRC:%.cpp=%.o}
-
-%.o: %.cpp
-	@${CXX} ${CXXFLAGS} -c $< -o $@
+OBJ		= ${SRC:.cpp=.o}
 
 all: ${NAME}
-${NAME} : ${OBJS}
-	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
-	@echo "Megaphone is ready. Usage: ./megaphone \"Your message here\""
+
+${NAME} : ${OBJ}
+	${CXX} ${CXXFLAGS} ${OBJ} -o ${NAME}
+	@echo "Megaphone is ready. \nUsage: ./megaphone \"Your message here\""
 
 clean:
-	@${RM} ${OBJS}
+	${RM} ${OBJ}
 
 fclean: clean
 	${RM} ${NAME}
+	@echo "Goodbye!"
 
 re: fclean all
 

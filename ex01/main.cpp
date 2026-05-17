@@ -6,12 +6,22 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 12:45:42 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/17 13:22:09 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/17 19:34:10 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <iostream>
+#include <cstdlib>
+#include <string>
 
+/**
+ * The main function serves as the entry point for the phone book application.
+ * It provides a simple command-line interface that allows users to:
+ * - ADD new contacts,
+ * - SEARCH for existing contacts,
+ * - EXIT the application.
+ */
 int	main(void)
 {
 	int			index;
@@ -25,35 +35,39 @@ int	main(void)
 		std::cin >> input;
 		if (input.compare("ADD") == 0)
 		{
-			Ph.AddContact();
+			Ph.addContact();
 		}
 		else if (input.compare("SEARCH") == 0)
 		{
-			if (Ph.GetNumberOfContacts() == 0)
+			if (Ph.getNumberOfContacts() == 0)
 				std::cout << "No contacts found." << std::endl;
 			else
 			{
-				Ph.DisplayContacts();
-				std::cout << "Press 0 to continue or select a contact: ";
+				Ph.displayContacts();
+				std::cout << "Press 0 to return or enter the index of the entry to display: ";
 				while (1)
 				{
 					input.clear();
 					std::cin >> input;
 					index = atoi(input.c_str());
 					if (index == 0)
-						break ;
-					if (index >= 1 && index <= 8 && index <= Ph.GetNumberOfContacts())
+						break ; // Return to the main menu
+					if (index >= 1 && index <= 8 && index <= Ph.getNumberOfContacts())
 					{
-						Ph.DisplayContact(index - 1);
+						Ph.displayContact(index - 1); // Display the selected contact (adjusting for 0-based index)
 						break;
 					}
 					else
-						std::cout << "Please select a contact, from 1 to " << Ph.GetNumberOfContacts() << ", or 0 to leave: ";
+						std::cout << "Index out of range. Please select a contact, from 1 to " << Ph.getNumberOfContacts() << ", or 0 to return to the menu: ";
 				}
 			}
 		}
 		else if (input.compare("EXIT") == 0)
+		{
+			std::cout << "Exiting the program..." << std::endl;
+			std::cout << "Done!" << std::endl;
 			break ;
+		}
 	}
 	return (0);
 }

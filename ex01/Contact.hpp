@@ -6,28 +6,27 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 12:25:51 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/17 13:32:07 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/17 17:20:45 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_H
 # define CONTACT_H
-#include <iostream>
+
 #include <string>
-#include <stdlib.h>
-#include <iomanip>
+
 
 class Contact
 {
 	public:
 		Contact(void);
-		void CreateContact(void);
-		void ClearContact(void);
-		std::string GetFirstName(void);
-		std::string GetLastName(void);
-		std::string GetNickname(void);
-		std::string GetPhoneNumber(void);
-		std::string GetDarkestSecret(void);
+		void createContact(void);
+		void clearContact(void);
+		std::string getFirstName(void);
+		std::string getLastName(void);
+		std::string getNickname(void);
+		std::string getPhoneNumber(void);
+		std::string getDarkestSecret(void);
 		~Contact(void);
 
 	private:
