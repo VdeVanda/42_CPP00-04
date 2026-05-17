@@ -226,13 +226,3 @@ ex01/
 ...
 
 ---
-
-## Submission & Evaluation
-
-Submit all required files for each exercise following the rules described above.  
-Pass all checks for compilation, naming, and organization.  
-**Tip:** Write clean and well-commented code—both your peers and future self will thank you!
-
----
-
-> “By Odin, by Thor! Use your brain!”
