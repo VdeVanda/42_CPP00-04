@@ -14,56 +14,29 @@
 
 ## C++ Modules
 
-<details open>
-  <summary><strong>Module 00</strong></summary>
-  <br>
-  
-  <details open>
-    <summary><code>ex00: Megaphone</code></summary>
-    A program that echoes its command-line arguments in uppercase letters.
-  </details>
-
-  <details>
-    <summary><code>ex01: My Awesome PhoneBook</code></summary>
-    A tiny terminal-based phonebook supporting these commands: ADD, SEARCH, EXIT.
-  </details>
-</details>
-
-<details>
-  <summary><strong>Module 01:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 02:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 03:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 04:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 05:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 06:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 07:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 08:</strong> <i>Coming soon</i></summary>
-</details>
-
-<details>
-  <summary><strong>Module 09:</strong> <i>Coming soon</i></summary>
-</details>
+```
+Module 00
+├── ex00 ── Megaphone                  # A program that echoes its command-line arguments in uppercase letters.
+└── ex01 ── My Awesome PhoneBook       # A tiny terminal-based phonebook supporting commands: ADD, SEARCH, EXIT.
+Module 01
+└──  Coming soon
+Module 02
+└──  Coming soon
+Module 03
+└──  Coming soon
+Module 04
+└──  Coming soon
+Module 05
+└──  Coming soon
+Module 06
+└──  Coming soon
+Module 07
+└──  Coming soon
+Module 08
+└──  Coming soon
+Module 09
+└──  Coming soon
+```
 
 # Introduction
 
