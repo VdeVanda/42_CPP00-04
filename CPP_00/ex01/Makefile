@@ -6,7 +6,7 @@
 #    By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/17 12:21:34 by vabatist          #+#    #+#              #
-#    Updated: 2026/05/17 16:58:13 by vabatist         ###   ########.fr        #
+#    Updated: 2026/05/20 09:12:44 by vabatist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ all: ${NAME}
 
 ${NAME} : ${OBJS}
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
-	@echo "PhoneBook is ready. \nUsage: ./PhoneBook"
+	@echo "PhoneBook is ready."
+	@echo "Usage: ./PhoneBook"
 
 clean:
 	${RM} ${OBJS}

@@ -6,7 +6,7 @@
 #    By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/16 18:25:15 by vabatist          #+#    #+#              #
-#    Updated: 2026/05/17 17:00:38 by vabatist         ###   ########.fr        #
+#    Updated: 2026/05/20 09:10:38 by vabatist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ all: ${NAME}
 
 ${NAME} : ${OBJ}
 	${CXX} ${CXXFLAGS} ${OBJ} -o ${NAME}
-	@echo "Megaphone is ready. \nUsage: ./megaphone \"Your message here\""
+	@echo "Megaphone is ready."
+	@echo "Usage: ./megaphone \"Your message here\""
 
 clean:
 	${RM} ${OBJ}
