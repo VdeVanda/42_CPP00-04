@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 12:45:42 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/20 10:05:58 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/20 10:51:40 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 #include <cstdlib>
 #include <string>
 #include <cctype>
+#include <limits>
 
+/**
+ * Checks if a string contains only digits.
+ * Returns true if all characters in the string are digits, false otherwise.
+ */
 static bool isAllDigits(const std::string &s)
 {
 	if (s.empty())
@@ -48,6 +53,7 @@ int	main(void)
 		std::cin >> input;
 		if (input.compare("ADD") == 0)
 		{
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			Ph.addContact();
 		}
 		else if (input.compare("SEARCH") == 0)

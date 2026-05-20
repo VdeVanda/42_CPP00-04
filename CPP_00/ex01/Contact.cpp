@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 12:42:56 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/17 18:49:04 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/20 10:51:40 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,24 +52,23 @@ void Contact::createContact(void)
 	while (this->_firstName.empty())
 	{
 		std::cout << "first name: ";
-		std::cin >> this->_firstName;
+		std::getline(std::cin, this->_firstName);
 	}
 	while (this->_lastName.empty())
 	{
 		std::cout << "last name: ";
-		std::cin >> this->_lastName;
+		std::getline(std::cin, this->_lastName);
 	}
 	while (this->_nickname.empty())
 	{
 		std::cout << "nickname: ";
-		std::cin >> this->_nickname;
+		std::getline(std::cin, this->_nickname);
 	}
 	while (this->_phoneNumber.empty())
 	{
 		std::cout << "phone number: ";
-		std::cin >> this->_phoneNumber;
+		std::getline(std::cin, this->_phoneNumber);
 	}
-	std::cin.ignore(); 
 	while (this->_darkestSecret.empty())
 	{
 		std::cout << "darkest secret: ";
