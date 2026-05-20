@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 18:10:12 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/20 19:10:45 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/20 22:13:10 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ class Zombie
 		std::string _name;
 
 	public:
-        Zombie( void );
-		Zombie( std::string name );
+        Zombie( std::string name );
 		~Zombie( void );
 		void announce( void );
         std::string getZombieName( void ) const;
