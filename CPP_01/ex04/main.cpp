@@ -58,7 +58,7 @@ void	searchReplace(std::ifstream &ifs, std::string name, std::string s1, std::st
 /**
  * @brief The main function checks if the number of arguments is correct.
  * If it is not, it prints an error message and closes the file if it is open
- * If everything is fine, it calls the searchNReplace function and closes the file.
+ * If everything is fine, it calls the searchReplace function and closes the file.
  * Finally, it returns 0.
  */
 int main(int argc, char *argv[])
