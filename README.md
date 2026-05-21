@@ -1,12 +1,12 @@
 *This project has been created as part of the 42 curriculum by vabatist.*
 #
 ```text
-    
-██████╗                     
-██╔════╝     ██╗       ██╗  
+
+██████╗
+██╔════╝     ██╗       ██╗
 ██║       ████████╗ ████████╗
 ██║       ╚══██╔══╝ ╚══██╔══╝
-╚██████╗     ██║       ██║  
+╚██████╗     ██║       ██║
  ╚═════╝     ╚═╝       ╚═╝
 
 ```
@@ -19,12 +19,12 @@ Module 00
 ├── ex00 ── Megaphone                  # A program that echoes its command-line arguments in uppercase letters.
 └── ex01 ── My Awesome PhoneBook       # A tiny terminal-based phonebook supporting commands: ADD, SEARCH, EXIT.
 Module 01
-├── ex00 ── BraiiiiiiinnnzzzZ          # 
-├── ex01 ── Moar brainz!               #
-├── ex02 ── HI THIS IS BRAIN           #
-├── ex03 ── Unnecessary violence 
-├── ex04 ── Sed is for losers 
-└── ex05 ── Harl 2.0 
+├── ex00 ── BraiiiiiiinnnzzzZ          #
+├── ex01 ── Moar brainz!
+├── ex02 ── HI THIS IS BRAIN
+├── ex03 ── Unnecessary violence
+├── ex04 ── Sed is for losers
+└── ex05 ── Harl 2.0
 Module 02
 └──  Coming soon
 Module 03
