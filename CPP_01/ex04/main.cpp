@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 22:13:45 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/21 23:19:44 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/22 15:10:25 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  * If everything is fine, it reads the file line by line and replaces every occurrence of the string to search with the string to replace.
  * Finally, it closes both files.
  */
-void	searchReplace(std::ifstream &ifs, std::string name, std::string s1, std::string s2)
+void	replace(std::ifstream &ifs, std::string name, std::string s1, std::string s2)
 {
 	std::string line;
 	size_t pos;
@@ -58,7 +58,7 @@ void	searchReplace(std::ifstream &ifs, std::string name, std::string s1, std::st
 /**
  * @brief The main function checks if the number of arguments is correct.
  * If it is not, it prints an error message and closes the file if it is open
- * If everything is fine, it calls the searchReplace function and closes the file.
+ * If everything is fine, it calls the replace function and closes the file.
  * Finally, it returns 0.
  */
 int main(int argc, char *argv[])
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 			ifs.close();
 		return 1;
 	}
-	searchReplace(ifs, argv[1], argv[2], argv[3]);
+	replace(ifs, argv[1], argv[2], argv[3]);
 	ifs.close();
 	return (0);
 }
