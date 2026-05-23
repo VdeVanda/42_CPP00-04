@@ -9,10 +9,10 @@ all: ${NAME}
 
 ${NAME} : ${OBJ}
 	${CXX} ${CXXFLAGS} ${OBJ} -o ${NAME}
-	@echo "\nsed is ready."
-	@echo "\nA program that opens a file and copies its content into a new file <filename>.replace,"
+	@echo "sed is ready."
+	@echo "A program that opens a file and copies its content into a new file <filename>.replace,"
 	@echo "replacing every occurrence of a string <s1> with another string <s2>."
-	@echo "\nUsage: ./sed <filename> <search> <replace>"
+	@echo "Usage: ./sed <filename> <search> <replace>"
 
 clean:
 	${RM} ${OBJ}
