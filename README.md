@@ -26,7 +26,9 @@ Module 01
 ├── ex04 ── Sed is for losers
 └── ex05 ── Harl 2.0
 Module 02
-└──  Coming soon
+├── ex00 ── My First Class in Orthodox Canonical Form  #
+├── ex01 ── Towards a more useful fixed-point number class
+└── ex02 ── HI THIS IS BRAIN
 Module 03
 └──  Coming soon
 Module 04
