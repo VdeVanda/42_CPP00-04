@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:02:43 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/26 21:38:13 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/28 23:48:09 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main( void )
 {
-
 	// 1. Default constructor called
 	Fixed a;
 
