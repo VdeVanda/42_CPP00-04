@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:03:09 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/28 22:31:34 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/28 22:50:54 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class	Fixed
 
 	private:
 		int					_fixedPoint;
-		static const int	_fractBit = 8;
+		static const int	_fractBit = 8; // Number of bits used for the fractional part of the fixed-point representation
 };
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &value); // without this, we won't be able to use std::cout << fixedValue; to print the fixed-point value
