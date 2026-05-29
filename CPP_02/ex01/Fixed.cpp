@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:07:52 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/29 08:09:57 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/29 08:49:09 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,14 @@ float	Fixed::toFloat(void) const // New member function to convert fixed-point v
 {
 	// To read back as float, just divides by 256
 	return (_fixedPoint / 256.0f); // Divide by 256 (which is 2^8) to convert fixed-point representation back to float
+	// return (_fixedPoint / (float)(1 << this->_fractBit)); the same but less efficient
 }
 
 int		Fixed::toInt(void) const
 {
 	// To read back as int, does a shift right (divides by 256)
 	return (_fixedPoint >> _fractBit); // Shift right to convert fixed-point representation back to int
+	// return (roundf(_fixedPoint / 256.0f)); the same but less efficient
 }
 
 
