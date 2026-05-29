@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:07:52 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/28 23:04:11 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/29 08:09:57 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Fixed::Fixed(const int value) // New constructor for int
 	std::cout << "Int constructor called" << std::endl;
 	// For int, does a shift left (multiplies by 256)
 	this->_fixedPoint = value << this->_fractBit; // Shift left to convert int to fixed-point representation
+	// this->_fixedPoint = value * 256; the same but less efficient because it calculates 256 every time instead of using a bit shift which is faster
 }
 
 Fixed::Fixed(const float value) // New constructor for float
@@ -44,6 +45,7 @@ Fixed::Fixed(const float value) // New constructor for float
 	std::cout << "Float constructor called" << std::endl; // multiply the float value by 256 and saves the result in the _fixedPoint member variable
 	// For float, multiplies by 256 and rounds
 	this->_fixedPoint = roundf(value * (1 << this->_fractBit)); // roundf function is used to round the result to the nearest integer
+	// this->_fixedPoint = roundf(value * 256); the same but less efficient because it calculates 256 every time instead of using a bit shift which is faster
 }
 
 Fixed::~Fixed()

@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:03:09 by vabatist          #+#    #+#             */
-/*   Updated: 2026/05/28 21:53:32 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/05/29 08:17:19 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ class	Fixed
 {
 	public:
 		Fixed();
-		Fixed(const Fixed &other);
-		Fixed &operator=(const Fixed &other);
+		Fixed(const Fixed &other); // Copy constructor
+		Fixed &operator=(const Fixed &other); // Copy assignment operator
 		~Fixed();
 
 		int		getRawBits(void) const;
