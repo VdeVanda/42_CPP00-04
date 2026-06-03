@@ -12,7 +12,7 @@
 ```
 # Table of Contents
 
-## C++ Modules
+# C++ Modules 00 - 04
 
 ```
 Module 00
@@ -32,16 +32,6 @@ Module 02
 Module 03
 └──  Coming soon
 Module 04
-└──  Coming soon
-Module 05
-└──  Coming soon
-Module 06
-└──  Coming soon
-Module 07
-└──  Coming soon
-Module 08
-└──  Coming soon
-Module 09
 └──  Coming soon
 ```
 
