@@ -30,7 +30,9 @@ Module 02
 ├── ex01 ── Towards a more useful fixed-point number class  #
 └── ex02 ── Now we’re talking                               #
 Module 03
-└──  Coming soon
+├── ex00 ── Aaaaand... OPEN!       #
+├── ex01 ── Serena, my love!       #
+└── ex02 ── Repetitive work        #
 Module 04
 └──  Coming soon
 ```
