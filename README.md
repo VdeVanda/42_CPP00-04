@@ -1,5 +1,5 @@
 *This project has been created as part of the 42 curriculum by vabatist.*
-#
+
 ```text
 
 ██████╗
@@ -10,11 +10,12 @@
  ╚═════╝     ╚═╝       ╚═╝
 
 ```
+
 # Table of Contents
 
 # C++ Modules 00 - 04
 
-```
+```tree
 Module 00
 ├── ex00 ── Megaphone                  # A program that echoes its command-line arguments in uppercase letters.
 └── ex01 ── My Awesome PhoneBook       # A tiny terminal-based phonebook supporting commands: ADD, SEARCH, EXIT.
@@ -42,7 +43,6 @@ Module 04
 C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension to the C programming language.
 This series of modules is intended to provide a practical, hands-on introduction to C++ and Object-Oriented Programming using the C++98 standard. Each module contains several coding exercises increasing in complexity.
 
-
 # General Rules
 
 - Compile with: `c++ -Wall -Wextra -Werror -std=c++98`
@@ -60,7 +60,6 @@ This series of modules is intended to provide a practical, hands-on introduction
 - Do not implement functions (except templates) in header files.
 - Makefiles follow standard rules as in C projects.
 - No dynamic allocation is allowed unless specified.
-
 
 # AI Instructions
 
