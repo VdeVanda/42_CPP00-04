@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 15:28:27 by vabatist          #+#    #+#             */
-/*   Updated: 2026/06/03 19:33:29 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:36:44 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class ScavTrap: public ClapTrap
 {
 	private:
-		bool	_guardMode;
 
 	public:
 		ScavTrap();
