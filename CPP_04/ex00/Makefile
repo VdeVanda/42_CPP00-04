@@ -12,6 +12,9 @@ ${NAME} : ${OBJS}
 	@echo "Animal is ready."
 	@echo "Usage: ./Animal"
 
+%.o:%.cpp
+	${CXX} ${CXXFLAGS} -c $< -o $@
+
 clean:
 	${RM} ${OBJS}
 
