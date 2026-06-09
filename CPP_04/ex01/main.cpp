@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 17:23:07 by vabatist          #+#    #+#             */
-/*   Updated: 2026/06/09 12:00:38 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/06/09 12:01:45 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,10 @@
     Dog basic;
     basic.getBrain()->setIdea(0, "chase the ball");
     Dog temp(basic);
+
     std::cout << "basic dog idea: " << basic.getBrain()->getIdea(0) << std::endl;
     std::cout << "temp dog idea: " << temp.getBrain()->getIdea(0) << std::endl;
+
     temp.getBrain()->setIdea(0, "sleep");
     std::cout << "After changing temp's dog idea:" << std::endl;
     std::cout << "basic dog idea: " << basic.getBrain()->getIdea(0) << std::endl;
