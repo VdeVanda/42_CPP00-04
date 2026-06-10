@@ -20,7 +20,7 @@ Module 00
 ├── ex00 ── Megaphone                  # A program that echoes its command-line arguments in uppercase letters.
 └── ex01 ── My Awesome PhoneBook       # A tiny terminal-based phonebook supporting commands: ADD, SEARCH, EXIT.
 Module 01
-├── ex00 ── BraiiiiiiinnnzzzZ          #
+├── ex00 ── BraiiiiiiinnnzzzZ          # 
 ├── ex01 ── Moar brainz!               #
 ├── ex02 ── HI THIS IS BRAIN           #
 ├── ex03 ── Unnecessary violence       #
@@ -31,11 +31,13 @@ Module 02
 ├── ex01 ── Towards a more useful fixed-point number class  #
 └── ex02 ── Now we’re talking                               #
 Module 03
-├── ex00 ── Aaaaand... OPEN!       #
-├── ex01 ── Serena, my love!       #
-└── ex02 ── Repetitive work        #
+├── ex00 ── Aaaaand... OPEN!     #
+├── ex01 ── Serena, my love!     #
+└── ex02 ── Repetitive work      #
 Module 04
-├── ex00 ── Polymorphism       #
+├── ex00 ── Polymorphism                           #
+├── ex01 ── I don’t want to set the world on fire  #
+└── ex02 ── Abstract class                         #
 ```
 
 # Introduction
