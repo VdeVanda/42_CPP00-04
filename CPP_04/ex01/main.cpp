@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 17:23:07 by vabatist          #+#    #+#             */
-/*   Updated: 2026/06/10 20:02:37 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/06/10 23:33:57 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,19 +76,19 @@
     originalCat.getBrain()->setIdea(0, "chase the ball");
     Cat copyCat(originalCat);
 
-    std::cout << "original cat idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
+    std::cout << std::endl << "original cat idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
     std::cout << "copy cat idea: " << copyCat.getBrain()->getIdea(0) << std::endl;
 
     copyCat.getBrain()->setIdea(0, "sleep");
-    std::cout << "After changing copy's cat idea:" << std::endl;
+    std::cout << std::endl<< "(After changing copy's cat idea)" << std::endl;
     std::cout << "original cat idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
     std::cout << "copy cat idea: " << copyCat.getBrain()->getIdea(0) << std::endl;
 
     std::cout << std::endl  << "=== Deep copy test - Dog (Assignment operator) ===" << std::endl;
 
-    Dog basic; //= new Dog();
+    Dog basic;
     basic.getBrain()->setIdea(0, "I love napping!");
-    Dog tmp; //= new Dog();
+    Dog tmp;
     tmp = basic;
 
     std::cout << std::endl << "Basic Dog idea: " << basic.getBrain()->getIdea(0);
