@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 17:23:07 by vabatist          #+#    #+#             */
-/*   Updated: 2026/06/10 23:33:57 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/06/11 10:15:18 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
  int main()
 {
-	std::cout << std::endl << "=== Creating new Dog and new Cat ===" << std::endl << std::endl;
+	std::cout << std::endl << "=== CREATING NEW DOG AND NEW CAT ===" << std::endl << std::endl;
 
     const Animal* j = new Dog();
     const Animal* i = new Cat();
@@ -26,7 +26,7 @@
     delete j; //should not create a leak
     delete i;
 
-    std::cout << std::endl << "=== Creating Array of Animals ===" << std::endl;
+    std::cout << std::endl << "=== CREATING ARRAY OF ANIMALS ===" << std::endl;
     const int arraySize = 6;
     Animal* animals[arraySize];
 
@@ -70,7 +70,7 @@
         idx++;
     }
 
-    std::cout << std::endl  << "=== Deep copy test - Cat (Copy Constructor) ===" << std::endl;
+    std::cout << std::endl  << "=== DEEP COPY TEST - CAT (COPY CONSTRUCTOR) ===" << std::endl << std::endl;
 
     Cat originalCat;
     originalCat.getBrain()->setIdea(0, "chase the ball");
@@ -84,7 +84,7 @@
     std::cout << "original cat idea: " << originalCat.getBrain()->getIdea(0) << std::endl;
     std::cout << "copy cat idea: " << copyCat.getBrain()->getIdea(0) << std::endl;
 
-    std::cout << std::endl  << "=== Deep copy test - Dog (Assignment operator) ===" << std::endl;
+    std::cout << std::endl  << "=== DEEP COPY TEST - DOG (ASSIGNMENT OPERATOR) ===" << std::endl << std::endl;
 
     Dog basic;
     basic.getBrain()->setIdea(0, "I love napping!");
@@ -106,7 +106,7 @@
     std::cout << "basic Dog Brain address: " << basic.getBrain() << std::endl;
     std::cout << "tmp Dog Brain address: " << tmp.getBrain() << std::endl << std::endl;
 
-    std::cout << "Destructors:" << std::endl << std::endl;
+    std::cout << "=== DESTRUCTORS ===" << std::endl << std::endl;
 
     return 0;
 }
