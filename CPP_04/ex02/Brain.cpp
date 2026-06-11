@@ -6,7 +6,7 @@
 /*   By: vabatist <vabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 23:09:31 by vabatist          #+#    #+#             */
-/*   Updated: 2026/06/08 23:35:17 by vabatist         ###   ########.fr       */
+/*   Updated: 2026/06/11 12:54:09 by vabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Brain& Brain::operator=(const Brain &other)
        while (i < 100)
        {
             ideas[i] = other.ideas[i];
+			i++;
        }
     }
 	std::cout << "Brain assignment operator called" << std::endl;
