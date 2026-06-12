@@ -11,9 +11,14 @@
 
 ```
 
+</summary><br><table><thead><tr><th>Module</th><th>Main Topic</th><th>Grade</th></tr></thead><tbody><tr><td><a href="https://github.com/VdeVanda/42_CPP00-04/tree/main/CPP_00"><b>CPP 00</b></a></td><td>Introduction to C++</td><td>80%</td></tr><tr><td><a href="https://github.com/VdeVanda/42_CPP00-04/tree/main/CPP_01"><b>CPP 01</b></td><td>Memory, pointers, and references (new, delete)</td><td>90%</td></tr><tr><td><a href="https://github.com/VdeVanda/42_CPP00-04/tree/main/CPP_02"><b>CPP 02</b></td><td>Operator overloading</td><td>80%</td></tr><tr><td><a href="https://github.com/VdeVanda/42_CPP00-04/tree/main/CPP_03"><b>CPP 03</b></td><td>Inheritance (private, public, protected)</td><td>80%</td></tr><tr><td><a href="https://github.com/VdeVanda/42_CPP00-04/tree/main/CPP_04"><b>CPP 04</b></td><td>Polymorphism, abstract classes and interfaces (virtual)</td><td>80%</td></tr></tbody></table></details>
+
+
 # Table of Contents
 
 # C++ Modules 00 - 04
+
+| **Module 00** | <details><summary><b>ex00 ── Megaphone </b> </summary><br>
 
 ```tree
 Module 00
