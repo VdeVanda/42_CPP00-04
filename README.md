@@ -20,8 +20,6 @@
 
 # Table of Contents
 
-# C++ Modules 00 - 04
-
 ```tree
 Module 00
 ├── ex00 ── Megaphone                  # A program that echoes its command-line arguments in uppercase letters.
